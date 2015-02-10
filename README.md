@@ -30,4 +30,16 @@ custom method, you can do it in this way:
 	}
 	Model.myCustomMethod.promisify = true;
 
-	
+
+##Custom methods
+
+From version 0.1.5 promises can be add to custom methods, not only for models.
+
+    var promisify = require('loopback-promisify');
+
+    function customMethod(param, param2, callback) {
+        //...
+    }
+
+    promisify.fn(customMethod);
+
