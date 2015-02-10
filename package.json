@@ -1,6 +1,6 @@
 {
   "name": "loopback-promisify",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Add promises to your loopback models",
   "author": "Maciej Chmielarski <hello@evenemento.co> (http://evenemento.co/)",
   "main": "lib/promisify.js",
