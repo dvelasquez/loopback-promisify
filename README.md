@@ -43,3 +43,14 @@ From version 0.1.5 promises can be add to custom methods, not only for models.
 
     promisify.fn(customMethod);
 
+##Example
+Assuming you have already a model with "promise":true, you can call it using the simple q.then() method:
+	Model.myCustomMethod = function(next) {
+		var otherModel = app.models.OtherModel;
+		
+		otherModel.find()
+			.then(function(otherModelResponse){
+				next(null, otherModelResponse);
+			});
+	}
+	Model.myCustomMethod.promisify = true;
